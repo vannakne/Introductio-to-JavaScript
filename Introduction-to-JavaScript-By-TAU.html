@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JavaScript -->
+    <script>
+    // Variable
+        
+        // There are 3 ways to declare variable in JavaScript
+        // var, const, let
+        // let -> able to reassign
+        // const -> unable to reassign
+
+        const age = 21;  // number
+        const name = "Vannak"; // string
+        const male = true; //boolean
+        const array = [0, 1, 2, 3, "vannak", 4, true, null, undefined];  // array
+        
+        array.push("newValue");     // add an element to array
+        array.pop();  // remove the last element from array
+        console.log("my name is", name, ". I am ", age, "years old by this year.");
+        console.log(array);
+        console.log(array[0]);
+        console.log(array.length);
+    // Data Type
+        // data type in JavaScript: Strings, Numbers, Boolean, Undefined, Null
+    
+    // Function
+        function sum(a, b){
+            const sum = a + b;
+            return sum // return undifined if we missed reture keyword
+        }
+        console.log(sum(5,7));
+
+        // anonymous function
+        // a function that we don't have name
+
+        setTimeout(function(){
+            console.log("say hello! after 1000 millisecond.")
+        }, 1000);   // note that the function inside setTimeout does not has a name.
+
+        // arrow function
+        // arrow funciton is just like standard function but with different syntax
+        setTimeout(() => {
+            console.log("say hi! after 1000 millisecond.")
+        }, 1000); // If your arrow function has a single line of code, then the function assumes that it is your return value
+    
+    // Objects
+        let cookie = {};  // by assigned {} to cookie, now cookie is an object
+        cookie = {
+            name: "Chocolate chip",
+            isSweet: true,
+            eatCookie: function(){
+                console.log("I am eating", name, "cookie.")
+            }
+        }
+        cookie.isSweet = false;
+        console.log(cookie)
+        console.log(cookie.name)
+        console.log(cookie.eatCookie())
+
+        // class
+        class Car {
+            constructor(brand, color){
+                this.brand = brand;
+                this.color = color;
+            }
+            
+            // class method
+            driveCar() {
+                console.log("I drive my", this.color, this.brand, "car.")
+            }
+        }
+        const myCar = new Car("Lambo", "Red");
+        myCar.driveCar();
+
+    // Conditionals
+        let attendace = 16;
+        if (attendace == 15){
+            console.log("Our class is full.")
+        }
+        else if (attendace > 15){
+            console.log("Our class is more than full.")
+        }
+        else{
+            console.log("Our class is not full.")
+        }
+        // and "&&" operator, or "||" operator
+
+    // Loops
+    const list = ["a", "b", "c", "d", "e"];
+    for (let i = 0; i < list.length; i++){
+        console.log(list[i])
+    }
+    
+    const password = "hello123";
+    let userGues = "";
+    while (userGues != password){
+        userGues = prompt("Try another password: ")
+    }; alert("Login successfully.")
+
+    let num = 0;
+    do {
+        console.log(num);
+        num++
+    } while (num < 5);
+    </script>
+
+</body>
+</html>
